@@ -168,3 +168,137 @@ for commuter in myCommuters {
         print("These skates are \(mySkates.brand) brand")
     }
 }
+
+//MARK: Closures
+
+// { (parameters) -> returnType in statements}
+
+let roster = ["Evan", "Eva", "Tommy", "Tom", "Sharon"]
+//want to sort names in backwards order
+
+//swift sorted method allows for custom sorting of arrays
+
+func backward(_ s1: String, _ s2: String) -> Bool {
+    return s1 > s2
+}
+
+//OLD WAY
+var reversedRoster = roster.sorted(by: backward(_:_:))
+print(reversedRoster) //sorts in reverse alphabetical order
+
+//Using a closure
+var reversedRoster = roster.sorted(by: {(s1:String, s2:String) -> Bool in return s1 > s2})
+print(reversedRoster)
+
+var reversedRoster = roster.sorted(by: {s1, s2 in s1 > s2})
+
+var reversedRoster = roster.sorted(by: {$0 > $1})
+print(reversedRoster)
+
+var reversedRoster = roster.sorted(by: >)
+print(reversedRoster) //not good code but it works
+
+//MARK: Enumerations
+
+enum JobStatus {
+    case NotStarted
+    case InProgress
+    case AlmostThere //if added after this is why we might want a default
+    case Done
+}
+
+struct Job {
+    var title: String
+    var status: JobStatus
+}
+
+var lab1 = Job(title: "Lab 1", status: JobStatus.NotStarted)
+
+switch lab1.status {
+case .Done:
+    print("Good Job")
+case .InProgress:
+    print("I'm working on it")
+case .NotStarted:
+    print("Get to work")
+//because enum we don’t necessarily need a default case, but still want an unknown just in case we modify enum
+case .AlmostThere:
+    print("So close")
+}
+
+//MARK: Errors
+
+enum APIError: Error {
+    case Forbidden
+    case NotFound
+    case RequestTimeout
+    case UnknownResponse
+}
+
+func checkStatus(status: Int) throws -> String {
+//either this function will throw and error or return a string
+    switch status {
+    case 403: throw APIError.Forbidden
+    case 404: throw APIError.NotFound
+    case 408: throw APIError.RequestTimeout
+    case 200: return "OK"
+    default:
+        throw APIError.UnknownResponse
+    }
+}
+
+//pretty good
+do {
+    let response = try checkStatus(status: 200)
+    print(response)
+} catch {
+    //anything in here is what will execute as soon as a try fails, so if try fails it won’t print the other line and skip to the catch and do this
+    //can show error as an alert in actual practice, for here we are printing it
+    print(error)
+//    print(error.localizedDescription) //can customize localizedDescription and maybe put status of the response but requires more extending
+}
+
+//better, catch each specific error that gets thrown
+do {
+    let response = try checkStatus(status: 403)
+    print(response)
+} catch APIError.Forbidden {
+    print("You don’t have permission to access this resource")
+} catch APIError.NotFound {
+    print("ould not find resource")
+} catch APIError.RequestTimeout {
+    print("The request timed out")
+} catch APIError.UnknownResponse {
+    print("Unknown Response")
+} catch {
+    print(error)
+}
+
+//MARK:  Guard or Early Exit
+
+//related to if statement and exectutes different code based on a boolean statement
+//mroe detailsd example in notes
+
+var dividend: Double = 3
+var divisor: Double = 2
+
+//guard divisor != 0 {
+//    print("Can’t divide by 0!") //guard this, if this fails do
+//    return //can also throw error, but generally seen in a function
+//}
+//return dividend/divisor
+//called early exit because used inside of a function and so above example wont work because not in a function
+
+func divide(dividend: Double, divisor: Double) -> Double? {
+    guard divisor != 0 else {
+        print("Cannot divide by 0!")
+        return nil
+    }
+    return dividend/divisor
+}
+
+let result = divide(dividend: 3, divisor: 0)
+
+if let validResult = result {
+    print(validResult)
+}
