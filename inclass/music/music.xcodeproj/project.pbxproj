@@ -18,6 +18,8 @@
 		04FF6BB323DA11EF00AB67F5 /* artist-albums.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04FF6BB223DA11EF00AB67F5 /* artist-albums.plist */; };
 		04FF6BB523DA123000AB67F5 /* ArtistAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF6BB423DA123000AB67F5 /* ArtistAlbums.swift */; };
 		04FF6BB723DA12AE00AB67F5 /* ArtistAlbumsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF6BB623DA12AE00AB67F5 /* ArtistAlbumsController.swift */; };
+		04FF6BB923E09CE800AB67F5 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF6BB823E09CE800AB67F5 /* FourthViewController.swift */; };
+		04FF6BBB23E0A52D00AB67F5 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF6BBA23E0A52D00AB67F5 /* FifthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		04FF6BB223DA11EF00AB67F5 /* artist-albums.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "artist-albums.plist"; sourceTree = "<group>"; };
 		04FF6BB423DA123000AB67F5 /* ArtistAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbums.swift; sourceTree = "<group>"; };
 		04FF6BB623DA12AE00AB67F5 /* ArtistAlbumsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbumsController.swift; sourceTree = "<group>"; };
+		04FF6BB823E09CE800AB67F5 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		04FF6BBA23E0A52D00AB67F5 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				04FF6B9A23D9FE7200AB67F5 /* FirstViewController.swift */,
 				04FF6B9C23D9FE7200AB67F5 /* SecondViewController.swift */,
 				04FF6B9E23D9FE7200AB67F5 /* Main.storyboard */,
+				04FF6BBA23E0A52D00AB67F5 /* FifthViewController.swift */,
+				04FF6BB823E09CE800AB67F5 /* FourthViewController.swift */,
 				04FF6BB223DA11EF00AB67F5 /* artist-albums.plist */,
 				04FF6BB423DA123000AB67F5 /* ArtistAlbums.swift */,
 				04FF6BB623DA12AE00AB67F5 /* ArtistAlbumsController.swift */,
@@ -154,10 +160,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FF6BBB23E0A52D00AB67F5 /* FifthViewController.swift in Sources */,
 				04FF6BB723DA12AE00AB67F5 /* ArtistAlbumsController.swift in Sources */,
 				04FF6B9D23D9FE7200AB67F5 /* SecondViewController.swift in Sources */,
 				04FF6B9B23D9FE7200AB67F5 /* FirstViewController.swift in Sources */,
 				04FF6BB523DA123000AB67F5 /* ArtistAlbums.swift in Sources */,
+				04FF6BB923E09CE800AB67F5 /* FourthViewController.swift in Sources */,
 				04FF6BAD23DA0BAF00AB67F5 /* ThirdViewController.swift in Sources */,
 				04FF6B9723D9FE7200AB67F5 /* AppDelegate.swift in Sources */,
 				04FF6B9923D9FE7200AB67F5 /* SceneDelegate.swift in Sources */,

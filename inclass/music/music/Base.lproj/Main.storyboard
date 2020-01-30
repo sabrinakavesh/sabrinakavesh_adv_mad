@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Third View Controller-->
         <scene sceneID="Cd1-m7-ePM">
             <objects>
                 <viewController id="jU1-3s-X3q" customClass="ThirdViewController" customModule="music" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Fd-Gg-5Xt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="rEd-fM-ElS"/>
+                    <tabBarItem key="tabBarItem" image="120-headphones" id="rEd-fM-ElS"/>
                     <connections>
                         <outlet property="artistLabel" destination="soT-LO-8jb" id="A0z-ON-KGv"/>
                         <outlet property="artistPicker" destination="ulY-Am-k6W" id="Uwe-xq-m7H"/>
@@ -100,7 +100,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Genre" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Genre" image="194-note-2" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="choiceLabel" destination="A5M-7J-77L" id="1go-Kf-bnv"/>
                         <outlet property="musicPicker" destination="gnK-99-nmz" id="BxR-aR-iUG"/>
@@ -109,6 +109,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1681" y="-331"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="A2h-vv-I0P">
+            <objects>
+                <viewController id="lgj-TC-Hdq" customClass="FifthViewController" customModule="music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WBt-ek-RIw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="f6T-lH-aA4">
+                                <rect key="frame" x="173" y="330.5" width="68" height="235"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbd-7s-0pq">
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="39"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <state key="normal" title="Record"/>
+                                        <connections>
+                                            <action selector="recordAudio:" destination="lgj-TC-Hdq" eventType="touchUpInside" id="98P-7B-T3I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhO-pi-ffB">
+                                        <rect key="frame" x="0.0" y="98" width="68" height="39"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="playAudio:" destination="lgj-TC-Hdq" eventType="touchUpInside" id="m9f-pw-FOP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3N-yN-fF8">
+                                        <rect key="frame" x="0.0" y="196" width="68" height="39"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="stopAudio:" destination="lgj-TC-Hdq" eventType="touchUpInside" id="zhp-K1-AcC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="f6T-lH-aA4" firstAttribute="centerX" secondItem="WBt-ek-RIw" secondAttribute="centerX" id="Zyj-PB-5Gh"/>
+                            <constraint firstItem="f6T-lH-aA4" firstAttribute="centerY" secondItem="WBt-ek-RIw" secondAttribute="centerY" id="fKv-ua-rFX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c9a-2D-cuu"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ZFC-ra-XHq"/>
+                    <connections>
+                        <outlet property="playAudio" destination="NhO-pi-ffB" id="RLy-4r-lYN"/>
+                        <outlet property="recordAudio" destination="zbd-7s-0pq" id="QZZ-JO-9F4"/>
+                        <outlet property="stopAudio" destination="m3N-yN-fF8" id="gMH-NL-f21"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ew4-9R-ef0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-512" y="804"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="sdg-qo-RK5">
+            <objects>
+                <viewController id="hcs-Av-sFN" customClass="FourthViewController" customModule="music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pyL-Pc-8oD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iS-hn-JPv">
+                                <rect key="frame" x="170.5" y="425" width="73" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Listen"/>
+                                <connections>
+                                    <action selector="goToMusic:" destination="hcs-Av-sFN" eventType="touchUpInside" id="qet-HD-MFD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1iS-hn-JPv" firstAttribute="centerX" secondItem="pyL-Pc-8oD" secondAttribute="centerX" id="IcJ-Yg-8GD"/>
+                            <constraint firstItem="1iS-hn-JPv" firstAttribute="centerY" secondItem="pyL-Pc-8oD" secondAttribute="centerY" id="q72-iH-5L3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c1O-0g-CmG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="31-ipod" id="ZnE-Pc-cmh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzU-Bb-12Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="804"/>
         </scene>
         <!--Decade-->
         <scene sceneID="wg7-f3-ORb">
@@ -151,7 +237,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Decade" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Decade" image="65-note" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="choiceLabel" destination="NDk-cv-Gan" id="Yis-dZ-IkA"/>
                         <outlet property="musicPicker" destination="JdN-EP-RTv" id="OeW-wg-Iga"/>
@@ -174,6 +260,8 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="jU1-3s-X3q" kind="relationship" relationship="viewControllers" id="UBs-WL-gsM"/>
+                        <segue destination="hcs-Av-sFN" kind="relationship" relationship="viewControllers" id="FVL-QF-Xc6"/>
+                        <segue destination="lgj-TC-Hdq" kind="relationship" relationship="viewControllers" id="Lir-YF-VW6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -182,7 +270,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="120-headphones" width="22" height="21"/>
+        <image name="194-note-2" width="23" height="23"/>
+        <image name="31-ipod" width="17" height="29"/>
+        <image name="65-note" width="15" height="24"/>
     </resources>
 </document>
