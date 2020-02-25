@@ -18,6 +18,7 @@
 		047A4DF224021D3300BAD2FA /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A4DE824021D3200BAD2FA /* AddCityViewController.swift */; };
 		047A4DF424021D3300BAD2FA /* StateInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A4DEA24021D3300BAD2FA /* StateInfoTableViewController.swift */; };
 		047A4DF524021D3300BAD2FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A4DEB24021D3300BAD2FA /* ViewController.swift */; };
+		047A4E2924059DC000BAD2FA /* lab2New in Resources */ = {isa = PBXBuildFile; fileRef = 047A4E2824059DC000BAD2FA /* lab2New */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		047A4DE824021D3200BAD2FA /* AddCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
 		047A4DEA24021D3300BAD2FA /* StateInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateInfoTableViewController.swift; sourceTree = "<group>"; };
 		047A4DEB24021D3300BAD2FA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../Desktop/lab2/ViewController.swift; sourceTree = "<group>"; };
+		047A4E2824059DC000BAD2FA /* lab2New */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lab2New; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				047A4DD324021C9800BAD2FA /* Assets.xcassets */,
 				047A4DD524021C9800BAD2FA /* LaunchScreen.storyboard */,
 				047A4DE724021D3200BAD2FA /* AppDelegate.swift */,
+				047A4E2824059DC000BAD2FA /* lab2New */,
 				047A4DE224021D3200BAD2FA /* DetailViewController.swift */,
 				047A4DE524021D3200BAD2FA /* SceneDelegate.swift */,
 				047A4DEA24021D3300BAD2FA /* StateInfoTableViewController.swift */,
@@ -143,6 +146,7 @@
 				047A4DDF24021CBB00BAD2FA /* usStates.plist in Resources */,
 				047A4DE124021CF800BAD2FA /* Main.storyboard in Resources */,
 				047A4DD724021C9800BAD2FA /* LaunchScreen.storyboard in Resources */,
+				047A4E2924059DC000BAD2FA /* lab2New in Resources */,
 				047A4DD424021C9800BAD2FA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = lab2New/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,6 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = lab2New/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
