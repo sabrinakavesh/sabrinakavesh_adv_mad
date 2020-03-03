@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>868523298594-c27d90ho33ak7nn8tb928vinggmvupb5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.868523298594-c27d90ho33ak7nn8tb928vinggmvupb5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBfrExkilx-c2YEPMnAJfzcBo0bE0j37qw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>868523298594</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ATLAS.miles</string>
+	<key>PROJECT_ID</key>
+	<string>miles-59cdd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>miles-59cdd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:868523298594:ios:5f5701cf4b685e9b975f7b</string>
+	<key>DATABASE_URL</key>
+	<string>https://miles-59cdd.firebaseio.com</string>
+</dict>
+</plist>
