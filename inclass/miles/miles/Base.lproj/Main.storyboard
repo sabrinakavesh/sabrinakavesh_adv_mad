@@ -21,12 +21,12 @@
                                     <navigationItem title="Add Run" id="PgF-DQ-hUr">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Vqw-3Q-HaI">
                                             <connections>
-                                                <segue destination="a9j-VI-hXM" kind="unwind" unwindAction="unwindSegueWithSegue:" id="eLl-5f-csa"/>
+                                                <segue destination="a9j-VI-hXM" kind="unwind" identifier="CancelSegue" unwindAction="unwindSegueWithSegue:" id="TZg-Tg-jWw"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="DbS-5I-BXL">
                                             <connections>
-                                                <segue destination="a9j-VI-hXM" kind="unwind" unwindAction="unwindSegueWithSegue:" id="Rhf-Kd-UHY"/>
+                                                <segue destination="a9j-VI-hXM" kind="unwind" identifier="SaveSegue" unwindAction="unwindSegueWithSegue:" id="Prq-Xg-taN"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -42,7 +42,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3p1-uL-TrU">
-                                        <rect key="frame" x="0.0" y="41" width="320" height="216"/>
+                                        <rect key="frame" x="0.0" y="41.5" width="320" height="216"/>
                                     </datePicker>
                                 </subviews>
                             </stackView>

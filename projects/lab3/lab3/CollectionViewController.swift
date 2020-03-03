@@ -123,17 +123,17 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
            if kind == UICollectionView.elementKindSectionHeader {
                header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath) as? HeaderView
                header?.headerLabel.text = "2019"
-                return header!
+//                return header!
            }
         if kind == UICollectionView.elementKindSectionFooter {
             footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath) as? FooterView
             footer?.footerLabel.text = "Over 327 Million people visited National Parks in 2019"
             
-            return footer!
+//            return footer!
         }
            
-//        return header!; footer
-        fatalError()
+        return header!
+//        fatalError()
        }
     
     
