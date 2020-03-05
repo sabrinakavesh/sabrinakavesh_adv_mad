@@ -13,6 +13,7 @@
 		0418EFEF2408261900968D00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0418EFEE2408261900968D00 /* Assets.xcassets */; };
 		0418EFF22408261900968D00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0418EFF02408261900968D00 /* LaunchScreen.storyboard */; };
 		0418EFFA2408267D00968D00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0418EFF92408267D00968D00 /* GoogleService-Info.plist */; };
+		045F9FB7240EC85C00BD7302 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F9FB6240EC85C00BD7302 /* SignInViewController.swift */; };
 		04A4CF6A2408316A00DFE844 /* RunTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4CF692408316A00DFE844 /* RunTableViewController.swift */; };
 		04A4CF6C2408318100DFE844 /* AddRunController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4CF6B2408318100DFE844 /* AddRunController.swift */; };
 		04A4CF6E240835A000DFE844 /* RunDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4CF6D240835A000DFE844 /* RunDataController.swift */; };
@@ -28,6 +29,7 @@
 		0418EFF12408261900968D00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0418EFF32408261900968D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0418EFF92408267D00968D00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		045F9FB6240EC85C00BD7302 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		04A4CF692408316A00DFE844 /* RunTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTableViewController.swift; sourceTree = "<group>"; };
 		04A4CF6B2408318100DFE844 /* AddRunController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRunController.swift; sourceTree = "<group>"; };
 		04A4CF6D240835A000DFE844 /* RunDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDataController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				0418EFE52408261900968D00 /* AppDelegate.swift */,
 				0418EFE72408261900968D00 /* SceneDelegate.swift */,
 				0418EFEB2408261900968D00 /* Main.storyboard */,
+				045F9FB6240EC85C00BD7302 /* SignInViewController.swift */,
 				04A4CF6D240835A000DFE844 /* RunDataController.swift */,
 				04A4CF692408316A00DFE844 /* RunTableViewController.swift */,
 				04A4CF6B2408318100DFE844 /* AddRunController.swift */,
@@ -236,6 +239,7 @@
 			files = (
 				04A4CF6E240835A000DFE844 /* RunDataController.swift in Sources */,
 				04A4CF6A2408316A00DFE844 /* RunTableViewController.swift in Sources */,
+				045F9FB7240EC85C00BD7302 /* SignInViewController.swift in Sources */,
 				0418EFE62408261900968D00 /* AppDelegate.swift in Sources */,
 				0418EFE82408261900968D00 /* SceneDelegate.swift in Sources */,
 				04A4CF6C2408318100DFE844 /* AddRunController.swift in Sources */,

@@ -23,7 +23,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
            super.viewDidLoad()
            
            //populate array wiht image names
-           for i in 1...20 {
+           for i in 1...15 {
                parkImages.append("park" + String(i)) //
            }
            
@@ -97,6 +97,10 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
            return CGSize.init(width: 50, height: 50)
        }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize.init(width: 50, height: 100)
+    }
        
        //set content for header
        override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -123,16 +127,16 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
            if kind == UICollectionView.elementKindSectionHeader {
                header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath) as? HeaderView
                header?.headerLabel.text = "2019"
-//                return header!
+                return header!
            }
-        if kind == UICollectionView.elementKindSectionFooter {
+        else {
             footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath) as? FooterView
             footer?.footerLabel.text = "Over 327 Million people visited National Parks in 2019"
-            
-//            return footer!
+            footer?.footerLabel.sizeToFit()
+            return footer!
         }
            
-        return header!
+//        return header!
 //        fatalError()
        }
     
