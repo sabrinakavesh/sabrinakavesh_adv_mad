@@ -1,0 +1,114 @@
+   [
+       {
+         "title": "Assateague Island National Seashore - Virginia District Temporary Closure",
+         "id": "F2A99BD1-A841-6BB9-44426C9B90A64526",
+         "description": "Chincoteague National Wildlife Refuge will be closed for a portion of the day on both April 17, 2020 and April 18, 2020 to allow the Chincoteague Volunteer Fire Company to conduct its spring health check on the Chincoteague ponies.",
+         "category": "Park Closure",
+         "url": "https://www.fws.gov/refuge/chincoteague/",
+         "parkCode": "asis"
+       },
+       {
+         "title": "Strong Winds and Hazard Trees",
+         "id": "14782F36-1DD8-B71B-0BCA86558413B16E",
+         "description": "Because of recent fires and forest die-back, some areas of the Monument can be dangerous during times of high winds. Use caution and stay alert when hiking on windy days, and backcountry camp well away from stands of dead or fire damaged trees.",
+         "category": "Caution",
+         "url": "",
+         "parkCode": "band"
+       },
+       {
+         "title": "Temporary Closure - Silver King Wildfire",
+         "id": "5374F93C-988C-2F6A-DABFB89D9B3C5289",
+         "description": "To allow for firefighting efforts and providing for the safety of visitors and personnel, all areas in Big Cypress N.P., North of I-75, between mile markers 49 and 63 are closed to public access. As conditions allow, this order will be rescinded.",
+         "category": "Park Closure",
+         "url": "",
+         "parkCode": "bicy"
+       },
+        {
+     "title": "All Campgrounds & Restrooms CLOSED at Big Cypress National Preserve Until Further Notice",
+     "id": "1A099138-0E05-2E59-39C6CB5047555F05",
+     "description": "Effective April, 3:  all campgrounds & all restrooms are closed to all public entry until further notice. \nBurns Lake Campground\nMonument Lake Campground\nMidway Campground \nBear Island Campground\nPink Jeep & Gator Head Backcountry Campgrounds",
+     "category": "Park Closure",
+     "url": "https://www.recreation.gov/",
+     "parkCode": "bicy"
+   },
+     {
+       "title": "Parkway Status",
+       "id": "198AF7B5-C7A0-4D16-9CBBD31A5EE02356",
+       "description": "Many parkway facilities are closed in an effort to slow the spread of COVID-19. This includes all restrooms and portable toilets, visitor centers, campgrounds, picnic areas, and concession operations. Trails and most sections of the roadway remain open.",
+       "category": "Park Closure",
+       "url": "https://www.nps.gov/blri/planyourvisit/roadclosures.htm",
+       "parkCode": "blri"
+     },
+     {
+       "title": "Bunker Hill Monument",
+       "id": "1585EF77-91E1-69FE-A5AAC4BB8EB34933",
+       "description": "Following guidance from the CDC, recommendations from state & local public health authorities, and NPS Public Health Service Officers, Bunker Hill Monument and Museum are temporarily closed.",
+       "category": "Information",
+       "url": "",
+       "parkCode": "bost"
+     },
+     {
+       "title": "Charlestown Navy Yard Visitor Center",
+       "id": "15916E4D-B4E4-CC33-81691E173DF65876",
+       "description": "Following guidance from the CDC, recommendations from state & local public health authorities, and NPS Public Health Service Officers, the Charlestown Navy Yard Visitor Center is temporarily closed.",
+       "category": "Information",
+       "url": "",
+       "parkCode": "bost"
+     },
+     {
+       "title": "Ocracoke Beach Access parking area closed to support debris cleanup efforts",
+       "id": "1D65B412-A800-4A15-6D4E4EFF171D9533",
+       "description": "The Seashore has temporarily closed the Ocracoke Beach Access parking area to support Hyde County debris cleanup efforts. The area will remain closed until debris removal operations are finished.",
+       "category": "Information",
+       "url": "",
+       "parkCode": "caha"
+     },
+     {
+       "title": "Research Library Closed",
+       "id": "0C0DB31A-C4AF-4440-96785D0BE6E8AF54",
+       "description": "Due to a remodel of the library and office facilities, the Fort Davis NHS research library will be closed until further notice.  The estimated time of reopening is July 2020.",
+       "category": "Information",
+       "url": "",
+       "parkCode": "foda"
+     },
+     {
+       "title": "Visitor Center Closure",
+       "id": "2877F528-C315-C739-47C042B1755BC4E9",
+       "description": "As of 3/18/20, the Fort Smith National Historic Site Visitor Center is closed until further notice. Where it is possible to adhere to the latest health guidance, the park grounds and trails will remain open to provide healthy options for the public.",
+       "category": "Park Closure",
+       "url": "https://www.nps.gov/fosm/learn/news/upload/3-17-20_FOSM_NPS-Press-Release-Site-Closures.pdf",
+       "parkCode": "fosm"
+     },
+     {
+       "title": "Fredericksburg and Spotsylvania National Military Park Response to Coronavirus",
+       "id": "183D7CF7-C15C-E468-46FF642DA8A35C16",
+       "description": "All public buildings are closed and public programs cancelled. Roads, trails and parking areas remain open, but are not maintained. Restrooms are closed. Changes will be in effect for the duration of Virginia’s emergency \"Stay Home\" order.",
+       "category": "Park Closure",
+       "url": "",
+       "parkCode": "frsp"
+     },
+     {
+       "title": "Temporary Closure of the John Bell House on The Dover Green",
+       "id": "1915D300-A852-885B-421DB36E5E304299",
+       "description": "Our partners at First State Heritage Park are temporarily closing the the John Bell House which provides tours of The Dover Green. The Dover Green will remain open during this time. Please visit their Facebook page for the most up to date information.",
+       "category": "Park Closure",
+       "url": "https://www.facebook.com/FirstStateHeritagePark/",
+       "parkCode": "frst"
+     },
+     {
+       "title": "Museum & Visitor Center closed until further notice, comfort stations closed through April 30",
+       "id": "160EA7AA-EFB1-BDCC-16202FD168C0EE09",
+       "description": "Due to Covid 19 pandemic & recent decisions by federal/state/local authorities, the Museum & Visitor Center will be closed until further notice. All comfort station will be closed through 4/30/20. The battlefield and all roads & trails will remain open.",
+       "category": "Park Closure",
+       "url": "https://www.nps.gov/gett/learn/news/covid-19-update-3-26-20.htm",
+       "parkCode": "gett"
+     },
+     {
+       "title": "Great Falls Park Visitor Center is temporarily closed as of March 17, 2020.",
+       "id": "1EA3E569-D624-C6AF-22FE8F779CF79C27",
+       "description": "Hiking trails and overlooks are still open. Following guidance from the CDC and recommendations from state and local public health officials, Great Falls Park Visitor Center is temporarily closed and fee operations have been suspended.",
+       "category": "Park Closure",
+       "url": "",
+       "parkCode": "grfa"
+     }
+   ]
