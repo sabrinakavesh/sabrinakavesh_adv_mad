@@ -5,6 +5,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -14,11 +16,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.lab6.R
 import com.example.lab6.data.Alert
 
-class SearchFragment : Fragment(), SearchRecyclerAdapter.AlertItemListener {
+class SearchFragment : Fragment() {
 
     private lateinit var sharedSearchViewModel: SharedSearchViewModel
-    private lateinit var recyclerView: RecyclerView
     private lateinit var navController: NavController
+
+    private lateinit var searchButton: Button
+    private lateinit var searchEditText: EditText
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -26,29 +30,29 @@ class SearchFragment : Fragment(), SearchRecyclerAdapter.AlertItemListener {
             savedInstanceState: Bundle?
     ): View? {
 
-        //instance of ViewModel
         sharedSearchViewModel = ViewModelProvider(requireActivity()).get(SharedSearchViewModel::class.java)
 
         //instantiate nav controller reference using its id from the xml of the main activity layout
         navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
 
         val root = inflater.inflate(R.layout.fragment_search, container, false)
-        recyclerView = root.findViewById(R.id.recyclerView)
 
-        //subscribe to data changes in the repository class via the ViewModel
-        sharedSearchViewModel.alertData.observe(viewLifecycleOwner, Observer {
-            //instantiate adapter
-            val adapter = SearchRecyclerAdapter(requireContext(), it, this)
-            //set the adapter to the recyclerview
-            recyclerView.adapter = adapter
-        })
+        searchButton = root.findViewById(R.id.searchButton)
+        searchEditText = root.findViewById(R.id.searchInput)
+
+        searchButton.setOnClickListener {
+            searchAlerts()
+        }
 
         return root
     }
 
-    override fun onAlertItemClick(alert: Alert) {
-        Log.i("alertLogging", alert.toString())
-        sharedSearchViewModel.selectedAlert.value = alert
-        navController.navigate(R.id.action_navigation_search_to_alertDetailFragment)
+    private fun searchAlerts() {
+        val searchTerm = searchEditText.text.toString()
+        if(searchTerm != null && searchTerm != "") {
+            sharedSearchViewModel.searchUserInput.value = searchTerm
+
+            navController.navigate(R.id.action_navigation_search_to_searchResultsFragment)
+        }
     }
 }

@@ -48,11 +48,6 @@ class AlertRepository(val app: Application) {
 	//we will publish from this class and subscribe from our fragment
 	val alertData = MutableLiveData<List<Alert>>()
 
-//	//fetch the data when the class is instantiated
-//	init {
-//		getAlertData()
-//	}
-
 	//get the raw text from our json file and update the LiveData object with the parsed data
 	@WorkerThread
 	private suspend fun getAlertData(searchTerm: String) {
@@ -81,14 +76,25 @@ class AlertRepository(val app: Application) {
 	//LiveData for the recipe details
 	val alertDetails = MutableLiveData<AlertDetails>()
 
-	private fun getAlertDetails(forAlert: Alert) {
-		val detailsText = FileHelper.readTextFromAssets(app, "sampleData.json")
+	@WorkerThread
+	private suspend fun getAlertDetails(forAlert: Alert) {
+		if(NetworkHelper.networkConnected(app)) {
+			val response = service.alertDetails(forAlert.id).execute()
+			if(response.body() != null) {
+				alertDetails.postValue(response.body())
+			} else {
+				Log.e(LOG_TAG, "Could not find details for ${forAlert.title}.Error code ${response.code()}")
+			}
+		}
 
-		val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
-		val adapter: JsonAdapter<AlertDetails> = moshi.adapter(AlertDetails::class.java)
 
-		//update our LiveData object with the results of our parsing
-		alertDetails.value = adapter.fromJson(detailsText)
+//		val detailsText = FileHelper.readTextFromAssets(app, "sampleData.json")
+//
+//		val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
+//		val adapter: JsonAdapter<AlertDetails> = moshi.adapter(AlertDetails::class.java)
+//
+//		//update our LiveData object with the results of our parsing
+//		alertDetails.value = adapter.fromJson(detailsText)
 	}
 
 }

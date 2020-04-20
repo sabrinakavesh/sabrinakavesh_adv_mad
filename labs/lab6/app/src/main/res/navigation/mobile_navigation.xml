@@ -11,8 +11,8 @@
         android:label="Search"
         tools:layout="@layout/fragment_search" >
         <action
-            android:id="@+id/action_navigation_search_to_alertDetailFragment"
-            app:destination="@id/alertDetailFragment" />
+            android:id="@+id/action_navigation_search_to_searchResultsFragment"
+            app:destination="@id/searchResultsFragment" />
     </fragment>
 
     <fragment
@@ -25,5 +25,14 @@
         android:name="com.example.lab6.ui.search.AlertDetailFragment"
         android:label="fragment_alert_detail_view"
         tools:layout="@layout/fragment_alert_detail_view" />
+    <fragment
+        android:id="@+id/searchResultsFragment"
+        android:name="com.example.lab6.ui.search.SearchResultsFragment"
+        android:label="fragment_search_results"
+        tools:layout="@layout/fragment_search_results">
+        <action
+            android:id="@+id/action_searchResultsFragment_to_alertDetailFragment"
+            app:destination="@id/alertDetailFragment" />
+    </fragment>
 
 </navigation>

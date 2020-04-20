@@ -17,15 +17,19 @@ class SharedSearchViewModel(app: Application) : AndroidViewModel(app) {
 
     val selectedAlert = MutableLiveData<Alert>()
 
+    val searchUserInput = MutableLiveData<String>()
+
     //add the recipe repo observer
     init {
         selectedAlert.observeForever(alertRepo.alertSelectedObserver)
+        searchUserInput.observeForever(alertRepo.searchTermEntered)
     }
 
     //called when the ViewModel is no longer used
     override fun onCleared() {
         //remove observers added with observe forever to prevent memory leak
         selectedAlert.removeObserver(alertRepo.alertSelectedObserver)
+        searchUserInput.removeObserver(alertRepo.searchTermEntered)
         super.onCleared()
     }
 
