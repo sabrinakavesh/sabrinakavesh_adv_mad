@@ -60,7 +60,7 @@ class AlertRepository(val app: Application) {
 				alertData.postValue(responseBody?.data?.toList())
 			} else {
 				//there was an error with the request (or server)
-				Log.e(LOG_TAG, "Could not search recipes. Error code: ${response.code()}")
+				Log.e(LOG_TAG, "Could not search alerts. Error code: ${response.code()}")
 			}
 		}
 	}
