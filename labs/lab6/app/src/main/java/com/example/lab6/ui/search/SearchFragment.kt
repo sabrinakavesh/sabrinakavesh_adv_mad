@@ -47,7 +47,7 @@ class SearchFragment : Fragment() {
         val searchTerm = searchEditText.text.toString()
         if(searchTerm != null && searchTerm != "") {
             sharedSearchViewModel.searchUserInput.value = searchTerm
-
+            sharedSearchViewModel.searchLoading = true
             navController.navigate(R.id.action_navigation_search_to_searchResultsFragment)
         }
     }

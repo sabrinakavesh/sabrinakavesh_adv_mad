@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
@@ -56,7 +57,7 @@ class AlertDetailFragment : Fragment() {
 		//set the title textview
 		alertTitleTextView.text = it.title
 
-
+		toggleLoading(false)
 
 //		//images can be fetched using the following pattern: https://spoonacular.com/recipeImages/{ID}-{SIZE}.{TYPE}
 //		//runs on background thread
@@ -229,14 +230,44 @@ class AlertDetailFragment : Fragment() {
 				setFavoriteMenuItemState(item, getString(R.string.remove))
 				//pass new favorite to view model for persistence
 				favoritesVM.addFavorite(currentAlert)
-//				showFavToast("ADD")
+				showFavToast("ADD")
 			} else {
-				favoritesVM.removeAlertFromFavorites(currentAlert.id)
-//				confirmFavRemove(item)
+//				favoritesVM.removeAlertFromFavorites(currentAlert.id)
+				confirmFavRemove(item)
 			}
 		}
 
 		return super.onOptionsItemSelected(item)
 	}
+
+	private fun showFavToast(type: String) {
+		if(type == "ADD") {
+			Toast.makeText(requireContext(),"Alert added to Favorites!", Toast.LENGTH_LONG).show()
+		} else {
+			Toast.makeText(requireContext(),"Alert removed from Favorites!", Toast.LENGTH_SHORT).show()
+		}
+	}
+
+	private fun confirmFavRemove(item: MenuItem) {
+		val dialogBuilder = AlertDialog.Builder(requireContext())
+		dialogBuilder.setMessage("Do you want to remove this alert from your favorites?")
+			.setCancelable(false)
+			// positive button text and action
+			.setPositiveButton("YES") { dialog, _ ->
+				favoritesVM.removeAlertFromFavorites(currentAlert.id)
+				setFavoriteMenuItemState(item, getString(R.string.save))
+				showFavToast("REMOVE")
+				dialog.dismiss()
+			}
+			// negative button text and action
+			.setNegativeButton("NO") {
+					dialog, _ -> dialog.cancel()
+			}
+
+		val alert = dialogBuilder.create()
+		alert.setTitle("Remove Favorite")
+		alert.show()
+	}
+
 
 }
