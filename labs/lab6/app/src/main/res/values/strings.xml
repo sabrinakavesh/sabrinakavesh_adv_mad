@@ -10,5 +10,7 @@
     <string name="category">Category</string>
     <string name="search_alerts">Search alerts</string>
     <string name="search">Search</string>
+    <string name="save">Save</string>
+    <string name="remove">Remove</string>
 <!--    <string name="parkCode">Park Code</string>-->
 </resources>

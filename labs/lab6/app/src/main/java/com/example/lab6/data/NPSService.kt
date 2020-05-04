@@ -11,6 +11,6 @@ interface NPSService {
 	fun searchAlerts(@Query("q") searchTerm: String): Call<SearchResponse>
 
 //	@GET("alerts?apiKey=${API_KEY}")
-	fun alertDetails(@Path("id") id: String): Call<AlertDetails>
+//	fun alertDetails(@Path("id") id: String): Call<Alert>
 
 }

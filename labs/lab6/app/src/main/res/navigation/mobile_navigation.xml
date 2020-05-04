@@ -19,15 +19,19 @@
         android:id="@+id/navigation_favorites"
         android:name="com.example.lab6.ui.favorites.FavoritesFragment"
         android:label="Favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_navigation_favorites_to_alertDetailFragment"
+            app:destination="@id/alertDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/alertDetailFragment"
-        android:name="com.example.lab6.ui.search.AlertDetailFragment"
+        android:name="com.example.lab6.ui.details.AlertDetailFragment"
         android:label="fragment_alert_detail_view"
         tools:layout="@layout/fragment_alert_detail_view" />
     <fragment
         android:id="@+id/searchResultsFragment"
-        android:name="com.example.lab6.ui.search.SearchResultsFragment"
+        android:name="com.example.lab6.ui.search.results.SearchResultsFragment"
         android:label="fragment_search_results"
         tools:layout="@layout/fragment_search_results">
         <action

@@ -1,4 +1,4 @@
-package com.example.lab6.ui.search
+package com.example.lab6.ui.search.results
 
 import android.os.Bundle
 import android.util.Log
@@ -14,11 +14,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.lab6.LOG_TAG
 import com.example.lab6.R
 import com.example.lab6.data.Alert
+import com.example.lab6.ui.adapters.AlertRecyclerAdapter
+import com.example.lab6.ui.search.SharedSearchViewModel
 
 /**
  * A simple [Fragment] subclass.
  */
-class SearchResultsFragment : Fragment(), SearchRecyclerAdapter.AlertItemListener {
+class SearchResultsFragment : Fragment(),
+	AlertRecyclerAdapter.AlertItemListener {
 
 	private lateinit var sharedSearchViewModel: SharedSearchViewModel
 	private lateinit var recyclerView: RecyclerView
@@ -36,13 +39,18 @@ class SearchResultsFragment : Fragment(), SearchRecyclerAdapter.AlertItemListene
 		//instance of ViewModel
 		sharedSearchViewModel = ViewModelProvider(requireActivity()).get(SharedSearchViewModel::class.java)
 
-		val root = inflater.inflate(R.layout.fragment_search, container, false)
+		val root = inflater.inflate(R.layout.fragment_search_results, container, false)
 		recyclerView = root.findViewById(R.id.recyclerView)
 
 		//subscribe to data changes in the repository class via the ViewModel
 		sharedSearchViewModel.alertData.observe(viewLifecycleOwner, Observer{
 			//instantiate adapter
-			val adapter = SearchRecyclerAdapter(requireContext(), it, this)
+			val adapter =
+				AlertRecyclerAdapter(
+					requireContext(),
+					it,
+					this
+				)
 			//set the adapter to the recyclerview
 			recyclerView.adapter = adapter
 		})

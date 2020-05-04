@@ -7,13 +7,14 @@ import com.example.lab6.data.Alert
 import com.example.lab6.data.AlertRepository
 
 class SharedSearchViewModel(app: Application) : AndroidViewModel(app) {
-    //instantiate repository class
+
+	//instantiate repository class
     private val alertRepo = AlertRepository(app)
 
     //get reference to LiveData object with a value of type List<Recipe>
     val alertData = alertRepo.alertData
 
-    val alertDetails = alertRepo.alertDetails
+//    val alertDetails = alertRepo.alertDetails
 
     val selectedAlert = MutableLiveData<Alert>()
 
@@ -21,14 +22,14 @@ class SharedSearchViewModel(app: Application) : AndroidViewModel(app) {
 
     //add the recipe repo observer
     init {
-        selectedAlert.observeForever(alertRepo.alertSelectedObserver)
+//        selectedAlert.observeForever(alertRepo.alertSelectedObserver)
         searchUserInput.observeForever(alertRepo.searchTermEntered)
     }
 
     //called when the ViewModel is no longer used
     override fun onCleared() {
         //remove observers added with observe forever to prevent memory leak
-        selectedAlert.removeObserver(alertRepo.alertSelectedObserver)
+//        selectedAlert.removeObserver(alertRepo.alertSelectedObserver)
         searchUserInput.removeObserver(alertRepo.searchTermEntered)
         super.onCleared()
     }

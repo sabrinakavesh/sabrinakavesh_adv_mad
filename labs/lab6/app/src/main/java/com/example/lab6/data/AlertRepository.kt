@@ -67,26 +67,25 @@ class AlertRepository(val app: Application) {
 
 	//    This portion of the class is dedicated to fetching detail for a specific recipe and updating the LiveData object
 
-	val alertSelectedObserver =  Observer<Alert> {
-		CoroutineScope(Dispatchers.IO).launch {
-			getAlertDetails(it)
-		}
-	}
-
-	//LiveData for the recipe details
-	val alertDetails = MutableLiveData<AlertDetails>()
-
-	@WorkerThread
-	private suspend fun getAlertDetails(forAlert: Alert) {
-		if(NetworkHelper.networkConnected(app)) {
-			val response = service.alertDetails(forAlert.id).execute()
-			if(response.body() != null) {
-				alertDetails.postValue(response.body())
-			} else {
-				Log.e(LOG_TAG, "Could not find details for ${forAlert.title}.Error code ${response.code()}")
-			}
-		}
-
+//	val alertSelectedObserver =  Observer<Alert> {
+//		CoroutineScope(Dispatchers.IO).launch {
+//			getAlertDetails(it)
+//		}
+//	}
+//
+//	//LiveData for the recipe details
+//	val alertDetails = MutableLiveData<AlertDetails>()
+////
+//	@WorkerThread
+//	private suspend fun getAlertDetails(forAlert: Alert) {
+//		if(NetworkHelper.networkConnected(app)) {
+//			val response = service.alertDetails(forAlert.id).execute()
+//			if(response.body() != null) {
+//				alertDetails.postValue(response.body())
+//			} else {
+//				Log.e(LOG_TAG, "Could not find details for ${forAlert.title}.Error code ${response.code()}")
+//			}
+//		}
 
 //		val detailsText = FileHelper.readTextFromAssets(app, "sampleData.json")
 //
@@ -95,6 +94,6 @@ class AlertRepository(val app: Application) {
 //
 //		//update our LiveData object with the results of our parsing
 //		alertDetails.value = adapter.fromJson(detailsText)
-	}
+//	}
 
 }

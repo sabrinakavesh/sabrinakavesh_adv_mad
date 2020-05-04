@@ -1,4 +1,4 @@
-package com.example.lab6.ui.search
+package com.example.lab6.ui.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.lab6.data.Alert
 import com.example.lab6.R
 
-class SearchRecyclerAdapter(val context: Context, val alertList: List<Alert>, val itemListener: AlertItemListener) : RecyclerView.Adapter<SearchRecyclerAdapter.ViewHolder>() {
+class AlertRecyclerAdapter(val context: Context, var alertList: List<Alert>, val itemListener: AlertItemListener) : RecyclerView.Adapter<AlertRecyclerAdapter.ViewHolder>() {
 	//custom ViewHolder
 	inner class ViewHolder(itemView: View) :
 		RecyclerView.ViewHolder(itemView) {
