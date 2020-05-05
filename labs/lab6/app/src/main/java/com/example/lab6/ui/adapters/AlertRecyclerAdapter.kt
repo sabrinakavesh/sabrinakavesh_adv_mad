@@ -11,8 +11,7 @@ import com.example.lab6.R
 
 class AlertRecyclerAdapter(val context: Context, var alertList: List<Alert>, val itemListener: AlertItemListener) : RecyclerView.Adapter<AlertRecyclerAdapter.ViewHolder>() {
 	//custom ViewHolder
-	inner class ViewHolder(itemView: View) :
-		RecyclerView.ViewHolder(itemView) {
+	inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 		val titleText = itemView.findViewById<TextView>(R.id.titleTextView)
 		val infoText = itemView.findViewById<TextView>(R.id.infoTextView)
 	}
@@ -36,10 +35,17 @@ class AlertRecyclerAdapter(val context: Context, var alertList: List<Alert>, val
 		holder.itemView.setOnClickListener {
 			itemListener.onAlertItemClick(curAlert)
 		}
+
+		holder.itemView.setOnLongClickListener( View.OnLongClickListener {
+			itemListener.onAlertLongClick(curAlert)
+			return@OnLongClickListener true
+		})
 	}
 
 	interface AlertItemListener {
 		fun onAlertItemClick(alert: Alert)
+
+		fun onAlertLongClick(alert: Alert)
 	}
 
 

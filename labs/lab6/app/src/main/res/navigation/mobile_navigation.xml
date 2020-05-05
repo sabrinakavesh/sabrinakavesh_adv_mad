@@ -40,7 +40,7 @@
     <fragment
         android:id="@+id/searchResultsFragment"
         android:name="com.example.lab6.ui.search.results.SearchResultsFragment"
-        android:label="fragment_search_results"
+        android:label="Results"
         tools:layout="@layout/fragment_search_results">
         <action
             android:id="@+id/action_searchResultsFragment_to_alertDetailFragment"
