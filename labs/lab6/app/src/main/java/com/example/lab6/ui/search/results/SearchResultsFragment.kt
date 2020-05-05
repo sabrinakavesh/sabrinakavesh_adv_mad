@@ -112,4 +112,6 @@ class SearchResultsFragment : Fragment(),
 		navController.navigate(R.id.action_searchResultsFragment_to_alertDetailFragment)
 	}
 
+
+
 }

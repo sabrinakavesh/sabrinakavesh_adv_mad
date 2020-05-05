@@ -36,16 +36,16 @@ class AlertRecyclerAdapter(val context: Context, var alertList: List<Alert>, val
 			itemListener.onAlertItemClick(curAlert)
 		}
 
-		holder.itemView.setOnLongClickListener( View.OnLongClickListener {
-			itemListener.onAlertLongClick(curAlert)
-			return@OnLongClickListener true
-		})
+//		holder.itemView.setOnLongClickListener( View.OnLongClickListener {
+//			itemListener.onAlertLongClick(curAlert)
+//			return@OnLongClickListener true
+//		})
 	}
 
 	interface AlertItemListener {
 		fun onAlertItemClick(alert: Alert)
 
-		fun onAlertLongClick(alert: Alert)
+//		fun onAlertLongClick(alert: Alert)
 	}
 
 
