@@ -7,7 +7,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface NPSService {
-	@GET("alerts?apiKey=${API_KEY}")
+	@GET("alerts?api_key=${API_KEY}")
 	fun searchAlerts(@Query("q") searchTerm: String): Call<SearchResponse>
 
 //	@GET("alerts?apiKey=${API_KEY}")
