@@ -1,5 +1,6 @@
 package com.example.lab6.ui.details
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -16,7 +17,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.lab6.LOG_TAG
 import com.example.lab6.R
-import com.example.lab6.data.AlertDetails
+import com.example.lab6.data.Alert
+//import com.example.lab6.data.AlertDetails
 import com.example.lab6.ui.favorites.SharedFavoritesViewModel
 import com.example.lab6.ui.search.SharedSearchViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -40,13 +42,13 @@ class AlertDetailFragment : Fragment() {
 
 
 	//keep track of what recipe we are showing
-	private lateinit var currentAlert: AlertDetails
+	private lateinit var currentAlert: Alert
 
 	private lateinit var loadingBar: ProgressBar
 
 	private var resumed = false
 
-	private val updateViewWithDetails = Observer<AlertDetails> {
+	private val updateViewWithDetails = Observer<Alert> {
 		//set the current recipe
 		currentAlert = it
 
@@ -87,7 +89,7 @@ class AlertDetailFragment : Fragment() {
 //		instructionsRecyclerView.adapter = instructionAdapter
 	}
 
-
+	@SuppressLint("ResourceType")
 	override fun onCreateView(
 		inflater: LayoutInflater, container: ViewGroup?,
 		savedInstanceState: Bundle?
@@ -100,9 +102,9 @@ class AlertDetailFragment : Fragment() {
 		val root = inflater.inflate(R.layout.fragment_alert_detail_view, container, false)
 //references to the necessary views
 
-		alertTitleTextView = root.findViewById<TextView>(R.id.alertTitleTextView)
-		categoryTextView = root.findViewById<TextView>(R.id.categoryTextView)
-		descriptionTextView = root.findViewById<TextView>(R.id.descriptionTextView)
+		alertTitleTextView = root.findViewById(R.id.alertTitleTextView)
+		categoryTextView = root.findViewById(R.id.categoryTextView)
+		descriptionTextView = root.findViewById(R.id.descriptionTextView)
 		descriptionTitleTextView = root.findViewById(R.id.descriptionTitleTextView)
 		categoryTitleTextView = root.findViewById(R.id.categoryTitleTextView)
 		constraintLayout = root.findViewById(R.id.detailConstraintLayout)

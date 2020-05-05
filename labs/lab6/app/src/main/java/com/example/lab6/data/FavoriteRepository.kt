@@ -25,7 +25,7 @@ class FavoriteRepository(val app: Application) {
 	val favoriteRoomList: LiveData<List<Favorite>> = favoriteDAO.getAllFavorites()
 
 	//transforms RecipeWithDetails to Favorite, List<Instructions>, List<Ingredients> and adds to Room using DAOs
-	fun addFavorite(alert: AlertDetails) {
+	fun addFavorite(alert: Alert) {
 		CoroutineScope(Dispatchers.IO).launch {
 			//insert the favorite
 			favoriteDAO.insertFavorite(alert.getRoomFavorite())
@@ -40,7 +40,7 @@ class FavoriteRepository(val app: Application) {
 		}
 	}
 
-	val favoriteDetails: MutableLiveData<AlertDetails> = MutableLiveData()
+	val favoriteDetails: MutableLiveData<Alert> = MutableLiveData()
 
 	fun getDetailsForAlert(alert: Alert) {
 		CoroutineScope((Dispatchers.IO)).launch {
@@ -48,7 +48,7 @@ class FavoriteRepository(val app: Application) {
 //			val instructions = instructionDAO.getInstructionsForRecipe(fav.recipe_id)
 //			val ingredients = ingredientDAO.getIngredientsForRecipe(fav.recipe_id)
 //
-			favoriteDetails.postValue(AlertDetails.fromRoomTypes(fav))
+			favoriteDetails.postValue(Alert.fromRoomFavorite(fav))
 		}
 	}
 

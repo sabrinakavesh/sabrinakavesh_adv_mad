@@ -30,7 +30,7 @@ class AlertRecyclerAdapter(val context: Context, var alertList: List<Alert>, val
 	override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 		val curAlert = alertList[position]
 		holder.titleText.text = curAlert.title
-		holder.infoText.text = "${curAlert.category} min"
+		holder.infoText.text = curAlert.category
 
 		//pass the data item to the fragment click listener
 		holder.itemView.setOnClickListener {

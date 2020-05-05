@@ -4,7 +4,7 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.*
 import com.example.lab6.data.Alert
-import com.example.lab6.data.AlertDetails
+//import com.example.lab6.data.AlertDetails
 import com.example.lab6.data.FavoriteRepository
 import com.example.lab6.data.database.AppDatabase
 import com.example.lab6.data.database.favorite.Favorite
@@ -16,7 +16,7 @@ class SharedFavoritesViewModel(app: Application) : AndroidViewModel(app) {
 
 	private val favRepo = FavoriteRepository(app)
 
-	val favDetails: MutableLiveData<AlertDetails> = favRepo.favoriteDetails
+	val favDetails: MutableLiveData<Alert> = favRepo.favoriteDetails
 
 	val favoriteAlertList: MutableLiveData<List<Alert>> = MutableLiveData()
 
@@ -46,7 +46,7 @@ class SharedFavoritesViewModel(app: Application) : AndroidViewModel(app) {
 	}
 
 	//pass new favorite to repo class for transform and insertion
-	fun addFavorite(alert: AlertDetails) {
+	fun addFavorite(alert: Alert) {
 		favRepo.addFavorite(alert)
 	}
 

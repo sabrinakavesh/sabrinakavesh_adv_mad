@@ -1,5 +1,6 @@
 package com.example.lab6.ui.search.results
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -32,6 +33,7 @@ class SearchResultsFragment : Fragment(),
 	private lateinit var recyclerView: RecyclerView
 	private lateinit var navController: NavController
 
+	@SuppressLint("ResourceType")
 	override fun onCreateView(
 		inflater: LayoutInflater,
 		container: ViewGroup?,
