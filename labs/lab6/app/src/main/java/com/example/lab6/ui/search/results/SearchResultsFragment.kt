@@ -108,7 +108,7 @@ class SearchResultsFragment : Fragment(),
 	override fun onAlertItemClick(alert: Alert) {
 		Log.i(LOG_TAG, alert.toString())
 
-		sharedSearchViewModel.selectedAlert.value = alert
+		sharedSearchViewModel.selectedAlert.value = alert!!
 		navController.navigate(R.id.action_searchResultsFragment_to_alertDetailFragment)
 	}
 

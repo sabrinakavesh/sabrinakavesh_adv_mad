@@ -16,7 +16,7 @@ class SharedSearchViewModel(app: Application) : AndroidViewModel(app) {
 
 //    val alertDetails = alertRepo.alertDetails
 
-    val selectedAlert = MutableLiveData<Alert>()
+    val selectedAlert:Alert? = null
 
     val searchUserInput = MutableLiveData<String>()
 
